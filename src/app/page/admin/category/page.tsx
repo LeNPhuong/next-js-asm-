@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
-const page = () => {
+const Page = () => {
   const [data, setData] = useState<any>(null)
 
   useEffect(() => {
@@ -48,7 +48,10 @@ const page = () => {
         </p>
       </div>
       {data.map((e: any, index: number) => (
-        <div className="grid-cols-[repeat(2,1fr)] grid justify-center mt-[20px]">
+        <div
+          key={e._id}
+          className="grid-cols-[repeat(2,1fr)] grid justify-center mt-[20px]"
+        >
           <p className="text-center font-[500]">{e.name}</p>
           <div className="flex justify-center items-center gap-[10px]">
             <Link
@@ -70,4 +73,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

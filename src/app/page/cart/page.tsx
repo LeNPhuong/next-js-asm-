@@ -4,7 +4,7 @@ import React from 'react'
 import Items from './Items'
 import { useAppSelector } from '../redux/store'
 
-const page = () => {
+const Page = () => {
   const cart = useAppSelector((e) => e.cart.cart)
 
   return (
@@ -46,4 +46,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

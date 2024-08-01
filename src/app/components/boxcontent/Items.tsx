@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { NextPage } from 'next'
+import Image from 'next/image'
 
 const Items: NextPage<{ product: any }> = ({ product }) => {
   return (
@@ -9,7 +10,12 @@ const Items: NextPage<{ product: any }> = ({ product }) => {
         {product?.map((e: any, index: number) => (
           <Link key={index} href={`/page/details/${e._id}`}>
             <div className="flex flex-col items-center p-[5px] min-w-[300px] max-w-[300px] border-[1px] border-[#ccc] rounded-[5px] py-[30px]">
-              <img className="h-[200px]" src={e.image} alt="" />
+              <Image
+               width={200}
+               height={200}
+                src={e.image}
+                alt=""
+              />
               <h1 className="text-[16px] text-center mt-[10px] min-h-[80px] border-b-[1px] border-b-[#ccc]">
                 {e.name}
               </h1>

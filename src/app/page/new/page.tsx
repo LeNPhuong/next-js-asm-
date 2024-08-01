@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import slugify from 'slugify'
 
-const page = () => {
+const Page = () => {
   const [title, setTile] = useState<string>('')
   const [content, setContent] = useState<string>('')
   return (
@@ -64,4 +64,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

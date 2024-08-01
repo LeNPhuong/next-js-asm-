@@ -4,6 +4,7 @@ import React from 'react'
 import useSWR from 'swr'
 import { useAppDispatch } from '../../redux/store'
 import { add } from '../../redux/slice'
+import Image from 'next/image'
 
 const Items: React.FC<{ id: string }> = ({ id }) => {
   const dispatch = useAppDispatch()
@@ -19,7 +20,7 @@ const Items: React.FC<{ id: string }> = ({ id }) => {
 
   return (
     <div className="flex flex-col p-[30px] min-w-[370px] max-w-[370px] border-[1px] border-[#ccc] rounded-lg gap-[10px]">
-      <img className="" src={data.data.image} alt="" />
+      <Image src={data.data.image} alt="" width={200} height={200} />
       <h1 className="text-[20px] font-[700] mt-[20px]">{data.data.name}</h1>
       <p className="font-[600] text-red-500 text-[18px]">
         Giá: {data.data.price}đ

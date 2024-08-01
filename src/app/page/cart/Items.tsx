@@ -3,13 +3,14 @@
 import React from 'react'
 import { useAppDispatch } from '../redux/store'
 import { minus, plus, remove } from '../redux/slice'
+import Image from 'next/image'
 
 const Items: React.FC<{ data: any }> = ({ data }) => {
   const dispatch = useAppDispatch()
   return (
     <div className="grid grid-cols-[repeat(5,1fr)] border-b-[1px] border-b-[#ccc] pb-[10px] items-center">
       <div className="flex justify-center">
-        <img src={data?.image} alt="" className="w-[150px]" />
+        <Image src={data?.image} alt="" width={200} height={200} />
       </div>
       <p className="text-center text-[16px] font-[500]">{data.name}</p>
       <p className="text-center text-red-500 font-[700]">{data.price}đ</p>

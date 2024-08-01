@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 
-const page: React.FC<{ params: { id: string } }> = ({ params }) => {
+const Page: React.FC<{ params: { id: string } }> = ({ params }) => {
   const [name, setName] = useState('')
   const [price, setPrice] = useState('')
   const [description, setDescription] = useState('')
@@ -17,7 +17,7 @@ const page: React.FC<{ params: { id: string } }> = ({ params }) => {
       setPrice(rs.data.price)
       setDescription(rs.data.description)
     })()
-  }, [])
+  }, [params.id])
 
   async function updatedata() {
     try {
@@ -39,7 +39,7 @@ const page: React.FC<{ params: { id: string } }> = ({ params }) => {
       const rs = await rq.json()
       alert(rs.message)
       window.location.reload()
-    } catch (error) { 
+    } catch (error) {
       alert('Cập nhật thất bại')
     }
   }
@@ -116,4 +116,4 @@ const page: React.FC<{ params: { id: string } }> = ({ params }) => {
   )
 }
 
-export default page
+export default Page

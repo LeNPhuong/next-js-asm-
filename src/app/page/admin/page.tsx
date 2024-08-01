@@ -1,9 +1,10 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
-const page = () => {
+const Page = () => {
   const [data, setData] = useState<any>(null)
 
   useEffect(() => {
@@ -53,9 +54,12 @@ const page = () => {
         </p>
       </div>
       {data.map((e: any, index: number) => (
-        <div className="grid-cols-[repeat(4,1fr)] grid justify-center mt-[20px]">
+        <div
+          key={index}
+          className="grid-cols-[repeat(4,1fr)] grid justify-center mt-[20px]"
+        >
           <div className="flex justify-center">
-            <img className="w-[100px]" src={e.image} alt="" />
+            <Image width={100} height={100} src={e.image} alt="" />
           </div>
           <p className="text-center font-[500]">{e.name}</p>
           <p className="text-center uppercase font-[600]">{e.price} đ</p>
@@ -79,4 +83,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

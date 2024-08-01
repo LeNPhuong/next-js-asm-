@@ -5,7 +5,7 @@ import Items from '@/app/components/boxcontent/Items'
 import { NextPage } from 'next'
 import React, { useEffect, useState } from 'react'
 
-const page: NextPage<{}> = () => {
+const Page: NextPage<{}> = () => {
   const [data, setData] = useState<any>(null)
   const [category, setCategory] = useState<any>(null)
   const [sortType, setSortType] = useState<any>(null)
@@ -70,4 +70,4 @@ const page: NextPage<{}> = () => {
   )
 }
 
-export default page
+export default Page

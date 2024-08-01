@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 
-const page: React.FC<{ params: { id: string } }> = ({ params }) => {
+const Page: React.FC<{ params: { id: string } }> = ({ params }) => {
   const [name, setName] = useState('')
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const page: React.FC<{ params: { id: string } }> = ({ params }) => {
 
       setName(rs.category.name)
     })()
-  }, [])
+  }, [params.id])
 
   async function updatedata() {
     try {
@@ -84,4 +84,4 @@ const page: React.FC<{ params: { id: string } }> = ({ params }) => {
   )
 }
 
-export default page
+export default Page
