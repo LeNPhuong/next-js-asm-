@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const Footer = () => {
@@ -6,8 +7,9 @@ const Footer = () => {
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
           © 2023{' '}
-          <img
-            className="w-auto h-[80px]"
+          <Image
+            width={80}
+            height={80}
             src="https://cms.vietnamreport.net//source/LogoBusiness/202106081228543.thegioididong.png"
             alt=""
           />

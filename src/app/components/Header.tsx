@@ -3,6 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { useAppSelector } from '../page/redux/store'
+import Image from 'next/image'
 
 const Header = () => {
   const cart = useAppSelector((e) => e.cart.cart)
@@ -12,8 +13,9 @@ const Header = () => {
         <nav className="flex items-center justify-between h-16 lg:h-20">
           <div className="flex-shrink-0">
             <a href="#" title="" className="flex">
-              <img
-                className="w-auto h-[80px]"
+              <Image
+                width={80}
+                height={80}
                 src="https://cms.vietnamreport.net//source/LogoBusiness/202106081228543.thegioididong.png"
                 alt=""
               />
