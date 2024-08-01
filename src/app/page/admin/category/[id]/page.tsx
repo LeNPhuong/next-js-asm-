@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 
-const page = ({ params }) => {
+const page: React.FC<{ params: { id: string } }> = ({ params }) => {
   const [name, setName] = useState('')
 
   useEffect(() => {

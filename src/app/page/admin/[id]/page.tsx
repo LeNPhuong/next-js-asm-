@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 
-const page = ({ params }) => {
+const page: React.FC<{ params: { id: string } }> = ({ params }) => {
   const [name, setName] = useState('')
   const [price, setPrice] = useState('')
   const [description, setDescription] = useState('')
@@ -39,7 +39,7 @@ const page = ({ params }) => {
       const rs = await rq.json()
       alert(rs.message)
       window.location.reload()
-    } catch (error) {
+    } catch (error) { 
       alert('Cập nhật thất bại')
     }
   }
