@@ -1,7 +1,3 @@
 {
-  // "extends": "next/core-web-vitals""parserOptions": {
-
-  "parserOptions": {
-    "sourceType": "module"
-  }
+  "extends": "next/core-web-vitals"
 }
