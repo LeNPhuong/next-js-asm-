@@ -7,7 +7,7 @@ const page = () => {
   const [data, setData] = useState<any>(null)
 
   useEffect(() => {
-    ;(async () => { 
+    ;(async () => {
       const rq = await fetch('http://localhost:7602/api/lab/product/category')
       const rs = await rq.json()
       console.log(rs)
