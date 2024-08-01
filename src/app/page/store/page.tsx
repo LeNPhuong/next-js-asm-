@@ -2,9 +2,10 @@
 
 import Category from '@/app/components/boxcontent/Category'
 import Items from '@/app/components/boxcontent/Items'
+import { NextPage } from 'next'
 import React, { useEffect, useState } from 'react'
 
-const page = () => {
+const page: NextPage<{}> = () => {
   const [data, setData] = useState<any>(null)
   const [category, setCategory] = useState<any>(null)
   const [sortType, setSortType] = useState<any>(null)
