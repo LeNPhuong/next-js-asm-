@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-const Footer = () => {
+const Footer: React.FC<{}> = () => {
   return (
     <footer className="bg-[#000]">
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
